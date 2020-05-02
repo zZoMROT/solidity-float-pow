@@ -1,5 +1,5 @@
 {
-    "name": "Soliditemp",
+    "name": "FloatPow",
     "version": "0.0.1",
     "description": "",
     "repository": {
@@ -39,6 +39,6 @@
         "lint:sol:fix": "solium -d . --fix",
         "lint": "yarn run lint:js && yarn run lint:sol",
         "lint:fix": "yarn run lint:js:fix && yarn run lint:sol:fix",
-        "dist": "truffle-flattener ./contracts/Soliditemp.sol > Soliditemp.full.sol && solcjs --bin --abi --optimize Soliditemp.full.sol && mv Soliditemp_full_sol_Soliditemp.bin Soliditemp.full.bin && mv Soliditemp_full_sol_Soliditemp.abi Soliditemp.full.abi && rm *_sol_*"
+        "dist": "truffle-flattener ./contracts/FloatPowContract.sol > FloatPowContract.full.sol && solcjs --bin --abi --optimize FloatPowContract.full.sol && mv FloatPowContract_full_sol_FloatPowContract.bin FloatPowContract.full.bin && mv FloatPowContract_full_sol_FloatPowContract.abi FloatPowContract.full.abi && rm *_sol_*"
     }
 }
