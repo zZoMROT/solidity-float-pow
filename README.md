@@ -2,8 +2,8 @@
 
 TruffleFramework template with travis-ci.org and coveralls.io configured
 
-[![Build Status](https://travis-ci.org/k06a/Soliditemp.svg?branch=master)](https://travis-ci.org/k06a/Soliditemp)
-[![Coverage Status](https://coveralls.io/repos/github/k06a/Soliditemp/badge.svg?branch=master)](https://coveralls.io/github/k06a/Soliditemp?branch=master)
+[![Build Status](https://travis-ci.org/zZoMROT/solidity-float-pow.svg?branch=master)](https://travis-ci.org/zZoMROT/solidity-float-pow)
+[![Coverage Status](https://coveralls.io/repos/github/zZoMROT/solidity-float-pow/badge.svg?branch=master)](https://coveralls.io/github/zZoMROT/solidity-float-pow?branch=master)
 
 ### Установка
 

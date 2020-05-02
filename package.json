@@ -4,7 +4,7 @@
     "description": "",
     "repository": {
         "type": "git",
-        "url": "git@github.com:k06a/Soliditemp.git"
+        "url": "git@github.com:zZoMROT/solidity-float-pow.git"
     },
     "license": "MIT",
     "dependencies": {
