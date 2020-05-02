@@ -5,33 +5,29 @@ TruffleFramework template with travis-ci.org and coveralls.io configured
 [![Build Status](https://travis-ci.org/zZoMROT/solidity-float-pow.svg?branch=master)](https://travis-ci.org/zZoMROT/solidity-float-pow)
 [![Coverage Status](https://coveralls.io/repos/github/zZoMROT/solidity-float-pow/badge.svg?branch=master)](https://coveralls.io/github/zZoMROT/solidity-float-pow?branch=master)
 
-### Установка
+### Installation
 
-1. Глобально установить [truffle](http://truffleframework.com) с помощью команды `npm install -g truffle`
-2. Глобально установить [ganache-cli](https://github.com/trufflesuite/ganache-cli) с помощью команды `npm install -g ganache-cli`
-3. Локально установить пакеты с помощью команды `npm install`
-4. Запустить ganache в отдельном терминале `scripts/rpc.sh` (Возможгно понадобится добавить в переменную окружения PATH с помощью команды `PATH=$PATH:<path_to_npm_bin>` путь до исполняемого файла npm, узнать этот путь можно командой `npm bin -g`)
-5. Запустить тесты с помощью команды `npm test`
+1. Install [truffle] (http://truffleframework.com) globally with the command `npm install -g truffle`
+2. Install [ganache-cli] (https://github.com/trufflesuite/ganache-cli) globally with the command `npm install -g ganache-cli`
+3. Install packages locally using the `npm install` command
+4. Run ganache in a separate terminal `ganache-cli` (You may need to add the path to the npm executable using the command `PATH = $ PATH: <path_to_npm_bin>` to the PATH environment variable, you can find out this path with the command `npm bin -g`)
+5. Run tests using the `npm test` command
 
-На macOS необходимо установить watchman: `brew install watchman`
+On macOS, you need to install watchman: `brew install watchman`
 
-Для смены версии компилятора необходимо указать нужную версию в `truffle.js` и переустановить его с помощью команд 
+To change the compiler version, you need to specify the desired version in `truffle.js` and reinstall it using the commands
 ```
 npm uninstall -g truffle
 npm install truffle
 ```
-После этого рекоммендуется сделать апдейт `ganache-cli` с помощью команды `npm install -g ganache-cli`
+After that, it is recommended to update `ganache-cli` with the command `npm install -g ganache-cli`
 
 
-```
-Отсутствие fallback'a  даст реверт, при попытке кинуть eth на адрес контракта
-```
+### Library
 
-### Библиотека
+`contracts/FloatPow.sol`
 
-`lib/Sqrt.sol`
-
-- `sqrt(uint256 c, uint256 rank)` - вавилонский корень степени `rank` из числа `c`
-- `precisionSqrt(uint256 c, uint256 rank, uint256 precision)` - корень степени `rank` с точностью `precision` знаков после запятой из `n`-разрядного числа `c`, при условии что `pk + n < 78`
+- `pow(uint256 c, uint256 rank)` - babylonian root of degree `rank` from number `c`, `Integer part of c^(1/rank)`
+- `precisionPow(uint256 c, uint256 rank, uint256 precision)` - root of degree `rank` with precision of `precision` decimal places from the `n`-bit number of `c`, provided that `pk + n <78`, `c^(1/rank)`
 
      

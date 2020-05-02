@@ -6,6 +6,10 @@ library FloatPow {
 
     using SafeMath for uint256;
 
+    /*
+     *  c^(1/rank) with accurate to `precision` decimal places
+     *  provided that `precision * rank + n < 78`, where `n` is number of digits of `c`
+     */
     function precisionPow(uint256 c, uint256 rank, uint256 precision) internal pure returns (uint256) {
 
         uint256 addDigits = 10 ** precision.mul(rank);
@@ -15,6 +19,9 @@ library FloatPow {
         return result;
     }
 
+    /*
+     *  Quotient[c^(1/rank), 1]
+     */
     function pow(uint256 c, uint256 rank) internal pure returns (uint256) {
         
         uint256 prevResult = 0;
