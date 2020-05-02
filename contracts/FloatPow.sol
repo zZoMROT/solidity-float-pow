@@ -1,21 +1,21 @@
 pragma solidity ^0.5.0;
 
-import "./SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
-library Sqrt {
+library FloatPow {
 
     using SafeMath for uint256;
 
-    function precisionSqrt(uint256 c, uint256 rank, uint256 precision) internal pure returns (uint256) {
+    function precisionPow(uint256 c, uint256 rank, uint256 precision) internal pure returns (uint256) {
 
         uint256 addDigits = 10 ** precision.mul(rank);
         
-        uint256 result = sqrt(c.mul(addDigits), rank);
+        uint256 result = pow(c.mul(addDigits), rank);
 
         return result;
     }
 
-    function sqrt(uint256 c, uint256 rank) internal pure returns (uint256) {
+    function pow(uint256 c, uint256 rank) internal pure returns (uint256) {
         
         uint256 prevResult = 0;
         uint256 result = 1;

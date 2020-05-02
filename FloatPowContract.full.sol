@@ -107,11 +107,11 @@ contract Ownable is Context {
     }
 }
 
-// File: contracts/Soliditemp.sol
+// File: contracts/FloatPowContract.sol
 
 pragma solidity ^0.5.0;
 
 
 
-contract Soliditemp is Ownable {
+contract FloatPowContract is Ownable {
 }
